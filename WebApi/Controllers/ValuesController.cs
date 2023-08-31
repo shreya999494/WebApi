@@ -15,6 +15,7 @@ namespace WebApi.Controllers
     public class ValuesController : ApiController
     {
         public readonly StudentDBContext studentDBContext;
+        //public readonly EmployeeDBContext employeeDBContext;
         public ValuesController()
         {
             this.studentDBContext = new StudentDBContext();
@@ -103,6 +104,21 @@ namespace WebApi.Controllers
             var remove = this.studentDBContext.Students.Where(x => x.Id == id).FirstOrDefault();
             this.studentDBContext.Students.Remove(remove);
             this.studentDBContext.SaveChanges();
+        }
+
+        [ActionName("CreateEmployee")]
+        [HttpPost]
+        public int Create(Employee emp)
+        {
+            //Student existingRecord = this.studentDBContext.Students.Where(x => x.Id == student.Id).FirstOrDefault();
+
+           // this.studentDBContext.Students.Add(student);
+
+            //this.studentDBContext.Entry(existingRecord).CurrentValues.SetValues(student);
+
+            //this.studentDBContext.SaveChanges();
+
+            //return student.Id;
         }
     }
 }
