@@ -106,19 +106,6 @@ namespace WebApi.Controllers
             this.studentDBContext.SaveChanges();
         }
 
-        [ActionName("CreateEmployee")]
-        [HttpPost]
-        public int Create(Employee emp)
-        {
-            //Student existingRecord = this.studentDBContext.Students.Where(x => x.Id == student.Id).FirstOrDefault();
-
-           // this.studentDBContext.Students.Add(student);
-
-            //this.studentDBContext.Entry(existingRecord).CurrentValues.SetValues(student);
-
-            //this.studentDBContext.SaveChanges();
-
-            //return student.Id;
-        }
+        
     }
 }
