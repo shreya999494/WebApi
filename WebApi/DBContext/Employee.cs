@@ -18,5 +18,6 @@ namespace WebApi.DBContext
         public string EmpName { get; set; }
         public string EmpDept { get; set; }
         public string EmpContactNo { get; set; }
+        public string EmpProject { get; set; }
     }
 }
